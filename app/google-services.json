@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "662034347376",
+    "firebase_url": "https://bmi-tracker-ef348.firebaseio.com",
+    "project_id": "bmi-tracker-ef348",
+    "storage_bucket": "bmi-tracker-ef348.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662034347376:android:d07da2493677b6bd31cbb5",
+        "android_client_info": {
+          "package_name": "com.example.bmi_weigthtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662034347376-dcninvvd8lvq10jl792111j7c313ica5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCty6IMrFvoUHVngNsBCAyw1h4LjMh9weY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662034347376-dcninvvd8lvq10jl792111j7c313ica5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BMI-Weigth Tracker</string>
+    <string name="action_settings">History</string>
+</resources>
