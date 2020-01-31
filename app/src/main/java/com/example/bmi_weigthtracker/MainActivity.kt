@@ -12,7 +12,15 @@ import androidx.core.app.ComponentActivity
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
+import org.json.JSONArray
+import org.json.JSONException
+import org.json.JSONObject
+import com.loopj.android.http.JsonHttpResponseHandler
+import com.loopj.android.http.RequestParams
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.util.Log
+import com.android.volley.Header
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +29,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+        val rp = RequestParams()
+        HttpUtils.post("http://5e2dbe3b3b0d640014be0ed3.mockapi.io/api/history", rp, object : JsonHttpResponseHandler() {
+            fun onSuccess(statusCode: Int, headers: Array<Header>, response: JSONObject) {
+                // If the response is JSONObject instead of expected JSONArray
+                Log.d("asd", "---------------- this is response : $response")
+                try {
+                    val serverResp = JSONObject(response.toString())
+                } catch (e: JSONException) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace()
+                }
+
+            }
+
+            fun onSuccess(statusCode: Int, headers: Array<Header>, timeline: JSONArray) {
+                // Pull out the first event on the public timeline
+
+            }
+        })
 
     }
 
